@@ -13,5 +13,20 @@ namespace PoisonedApples
         {
             return $"{Colour} apple{(Poisoned ? " (poisoned!)" : "")}";
         }
+
+        public override int GetHashCode()
+        {
+            return (Colour.GetHashCode() << 1) | (Poisoned ? 1 : 0);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Apple other)
+            {
+                return (other.Colour == this.Colour)
+                       && (other.Poisoned == this.Poisoned);
+            }
+            return false;
+        }
     }
 }
