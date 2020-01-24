@@ -28,11 +28,10 @@ namespace PoisonedApples
 
             while (true)
             {
-                yield return new Apple
-                {
-                    Colour = GetColour(colourIndex),
-                    Poisoned = poisonIndex % 41 == 0
-                };
+                yield return new Apple(
+                    GetColour(colourIndex),
+                    poisonIndex % 41 == 0
+                );
 
                 colourIndex += 5;
                 poisonIndex += 37;

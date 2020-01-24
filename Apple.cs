@@ -13,8 +13,14 @@ namespace PoisonedApples
 
     public class Apple
     {
-        public AppleColour Colour { get; set; }
-        public bool Poisoned { get; set; }
+        public AppleColour Colour { get; }
+        public bool Poisoned { get; }
+
+        public Apple(AppleColour colour, bool poisoned)
+        {
+            Colour = colour;
+            Poisoned = poisoned;
+        }
 
         public override string ToString()
         {
