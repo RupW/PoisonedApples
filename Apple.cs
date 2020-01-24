@@ -4,9 +4,16 @@ using System.Text;
 
 namespace PoisonedApples
 {
+    public enum AppleColour
+    {
+        Green,
+        Yellow,
+        Red
+    }
+
     public class Apple
     {
-        public string Colour { get; set; }
+        public AppleColour Colour { get; set; }
         public bool Poisoned { get; set; }
 
         public override string ToString()

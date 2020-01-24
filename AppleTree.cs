@@ -6,19 +6,19 @@ namespace PoisonedApples
 {
     public class AppleTree
     {
-        private string GetColour(int colourIndex)
+        private AppleColour GetColour(int colourIndex)
         {
             if (colourIndex % 13 == 0 || colourIndex % 29 == 0)
             {
-                return "Green";
+                return AppleColour.Green;
             }
 
             if (colourIndex % 11 == 0 || colourIndex % 19 == 0)
             {
-                return "Yellow";
+                return AppleColour.Yellow;
             }
 
-            return "Red";
+            return AppleColour.Red;
         }
 
         public IEnumerable<Apple> PickApples()
